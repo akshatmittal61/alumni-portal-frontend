@@ -6,8 +6,10 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.4"
   },
@@ -15,7 +17,8 @@
     "react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass": "sass src/style.scss:src/style.css src/pages/Home/home.scss:src/pages/Home/home.css src/components/Button/button.scss:src/components/Button/button.css -w"
   },
   "eslintConfig": {
     "extends": [
