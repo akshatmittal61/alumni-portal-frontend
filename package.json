@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "sass src/style.scss:src/style.css src/pages/Home/home.scss:src/pages/Home/home.css src/components/Button/button.scss:src/components/Button/button.css -w"
+    "sass": "sass src/style.scss:src/style.css src/pages/Home/home.scss:src/pages/Home/home.css src/components/Button/button.scss:src/components/Button/button.css src/pages/Login/login.scss:src/pages/Login/login.css -w"
   },
   "eslintConfig": {
     "extends": [

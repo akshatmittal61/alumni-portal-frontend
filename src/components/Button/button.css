@@ -16,7 +16,7 @@ button {
   border-radius: 5px;
   border: 2px solid transparent;
   outline: 2px solid transparent;
-  transition: all var(--transition-time) ease-in-out;
+  transition: all 1s ease-in-out;
 }
 .btn:hover {
   border-radius: 500px;
@@ -207,6 +207,24 @@ button {
 }
 .btn-outline {
   background-color: var(--white);
+}
+
+.icon {
+  border-radius: 500px;
+  border: 1px solid var(--back-shadow-dark);
+  padding: 0.25rem;
+  margin: 0.25rem;
+}
+.icon .material-icons {
+  font-size: 1rem;
+}
+.icon:hover {
+  background-color: var(--back-shadow-light);
+  border: 1px solid var(--back-shadow-light);
+}
+.icon:active, .icon:focus {
+  background-color: var(--back-shadow-dark);
+  border: 1px solid var(--back-shadow-dark);
 }
 
 /*# sourceMappingURL=button.css.map */

@@ -328,6 +328,27 @@ a:hover, a:active, a:focus, a:visited {
   outline: none;
 }
 
+input, input:hover, input:active, input:focus,
+textarea,
+textarea:hover,
+textarea:active,
+textarea:focus,
+select,
+select:hover,
+select:active,
+select:focus {
+  background: transparent;
+  font: inherit;
+  border: none;
+  outline: none;
+}
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
