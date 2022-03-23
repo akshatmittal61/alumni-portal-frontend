@@ -5,7 +5,7 @@ import "./button.css";
 
 const Button = ({
 	text = "Click Me",
-	color = "blue",
+	color = "",
 	size = "normal",
 	containsLink = false,
 	link = "#",
@@ -20,8 +20,8 @@ const Button = ({
 	classes += ` btn-${_.kebabCase(color)}`;
 	if (size === "small") classes += " btn-sm";
 	else if (size === "large") classes += " btn-lg";
-	if (variant === "fill" || variant === "outline")
-		classes += ` btn-${variant}`;
+	if (variant === "outline")
+		classes += ` btn-${variant} btn-${color}-outline`;
 	return (
 		<>
 			{containsLink ? (

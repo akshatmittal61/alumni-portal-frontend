@@ -37,6 +37,9 @@ npm run react
 # Author
 
 -   [Akshat Mittal](https://github.com/akshatmittal61)
+
+# Contributors
+
 -   [Akshat Khosya](https://github.com/akshat-khosya)
 -   [Mitali Jain](https://github.com/Mitalijain3)
 -   [Saurabh Singh](https://github.com/saurabhh-svg)

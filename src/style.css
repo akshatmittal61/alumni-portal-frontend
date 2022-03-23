@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin&family=Montserrat&family=Open+Sans&family=Roboto&family=Sacramento&family=Caveat&family=Architects+Daughter&family=Indie+Flower&display=swap");
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: all var(--transition-time) ease-in-out;
 }
 
 :root {

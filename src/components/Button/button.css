@@ -16,7 +16,7 @@ button {
   border-radius: 5px;
   border: 2px solid transparent;
   outline: 2px solid transparent;
-  transition: border-radius 1s ease, outline 0.25s ease-in-out;
+  transition: all var(--transition-time) ease-in-out;
 }
 .btn:hover {
   border-radius: 500px;
@@ -35,15 +35,18 @@ button {
 }
 .btn-lg {
   font-size: 1.125rem;
-  padding: 1rem 1.6rem;
+  padding: 1rem 1.875rem;
   font-weight: 550;
 }
 .btn-white {
   background-color: var(--white);
-  color: var(--black);
+  color: var(--white);
 }
 .btn-white:active, .btn-white:focus {
   outline-color: var(--white);
+}
+.btn-white-outline {
+  color: var(--white);
 }
 .btn-black {
   background-color: var(--black);
@@ -51,11 +54,17 @@ button {
 .btn-black:active, .btn-black:focus {
   outline-color: var(--black);
 }
+.btn-black-outline {
+  color: var(--black);
+}
 .btn-red {
   background-color: var(--red);
 }
 .btn-red:active, .btn-red:focus {
   outline-color: var(--red);
+}
+.btn-red-outline {
+  color: var(--red);
 }
 .btn-pink {
   background-color: var(--pink);
@@ -63,11 +72,17 @@ button {
 .btn-pink:active, .btn-pink:focus {
   outline-color: var(--pink);
 }
+.btn-pink-outline {
+  color: var(--pink);
+}
 .btn-purple {
   background-color: var(--purple);
 }
 .btn-purple:active, .btn-purple:focus {
   outline-color: var(--purple);
+}
+.btn-purple-outline {
+  color: var(--purple);
 }
 .btn-dark-purple {
   background-color: var(--dark-purple);
@@ -75,11 +90,26 @@ button {
 .btn-dark-purple:active, .btn-dark-purple:focus {
   outline-color: var(--dark-purple);
 }
+.btn-dark-purple-outline {
+  color: var(--dark-purple);
+}
 .btn-indigo {
   background-color: var(--indigo);
 }
 .btn-indigo:active, .btn-indigo:focus {
   outline-color: var(--indigo);
+}
+.btn-indigo-outline {
+  color: var(--indigo);
+}
+.btn-blue {
+  background-color: var(--blue);
+}
+.btn-blue:active, .btn-blue:focus {
+  outline-color: var(--blue);
+}
+.btn-blue-outline {
+  color: var(--blue);
 }
 .btn-light-blue {
   background-color: var(--light-blue);
@@ -87,12 +117,18 @@ button {
 .btn-light-blue:active, .btn-light-blue:focus {
   outline-color: var(--light-blue);
 }
+.btn-light-blue-outline {
+  color: var(--light-blue);
+}
 .btn-cyan {
   background-color: var(--cyan);
-  color: var(--black);
+  color: var(--white);
 }
 .btn-cyan:active, .btn-cyan:focus {
   outline-color: var(--cyan);
+}
+.btn-cyan-outline {
+  color: var(--cyan);
 }
 .btn-green {
   background-color: var(--green);
@@ -100,19 +136,28 @@ button {
 .btn-green:active, .btn-green:focus {
   outline-color: var(--green);
 }
+.btn-green-outline {
+  color: var(--green);
+}
 .btn-light-green {
   background-color: var(--light-green);
-  color: var(--black);
+  color: var(--white);
 }
 .btn-light-green:active, .btn-light-green:focus {
   outline-color: var(--light-green);
 }
+.btn-light-green-outline {
+  color: var(--light-green);
+}
 .btn-yellow {
   background-color: var(--yellow);
-  color: var(--black);
+  color: var(--white);
 }
 .btn-yellow:active, .btn-yellow:focus {
   outline-color: var(--yellow);
+}
+.btn-yellow-outline {
+  color: var(--yellow);
 }
 .btn-orange {
   background-color: var(--orange);
@@ -120,11 +165,17 @@ button {
 .btn-orange:active, .btn-orange:focus {
   outline-color: var(--orange);
 }
+.btn-orange-outline {
+  color: var(--orange);
+}
 .btn-deep-orange {
   background-color: var(--deep-orange);
 }
 .btn-deep-orange:active, .btn-deep-orange:focus {
   outline-color: var(--deep-orange);
+}
+.btn-deep-orange-outline {
+  color: var(--deep-orange);
 }
 .btn-brown {
   background-color: var(--brown);
@@ -132,18 +183,30 @@ button {
 .btn-brown:active, .btn-brown:focus {
   outline-color: var(--brown);
 }
+.btn-brown-outline {
+  color: var(--brown);
+}
 .btn-gray {
   background-color: var(--gray);
-  color: var(--black);
+  color: var(--white);
 }
 .btn-gray:active, .btn-gray:focus {
   outline-color: var(--gray);
+}
+.btn-gray-outline {
+  color: var(--gray);
 }
 .btn-blue-gray {
   background-color: var(--blue-gray);
 }
 .btn-blue-gray:active, .btn-blue-gray:focus {
   outline-color: var(--blue-gray);
+}
+.btn-blue-gray-outline {
+  color: var(--blue-gray);
+}
+.btn-outline {
+  background-color: var(--white);
 }
 
 /*# sourceMappingURL=button.css.map */
