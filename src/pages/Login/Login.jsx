@@ -18,6 +18,14 @@ const Login = () => {
 			[name]: value,
 		});
 	};
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		console.log(user);
+		setUser({
+			username: "",
+			password: "",
+		});
+	};
 	return (
 		<section
 			className="login"
@@ -29,7 +37,10 @@ const Login = () => {
 				<div className="login-left">
 					<div className="legin-left-top">
 						<div className="login-left-title">Welcome!</div>
-						<form className="login-left-form">
+						<form
+							className="login-left-form"
+							onSubmit={handleSubmit}
+						>
 							<div className="login-left-form-group">
 								<label>
 									<span className="material-icons">

@@ -75,18 +75,8 @@
   padding: 0.6rem 2rem;
   border-bottom: 2px solid var(--back-shadow);
 }
-.login-left-form input::before {
-  content: attr(data-icon);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, 0.25rem);
-}
 .login-left-form input:active, .login-left-form input:focus {
   border-bottom: 2px solid var(--brown);
-}
-.login-left-form input:active + label, .login-left-form input:focus + label {
-  color: var(--brown-700);
 }
 .login-left-form input:active + label,
 .login-left-form input:focus + label {
