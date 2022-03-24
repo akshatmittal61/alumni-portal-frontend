@@ -34,7 +34,7 @@ const Register = () => {
 	};
 	return (
 		<section className="register">
-			<div className="register-container">
+			<div className="register-container" data-aos="zoom-in">
 				<div className="register-content">
 					<div className="register-title">
 						<span>Sign Up</span>
@@ -114,8 +114,8 @@ const Register = () => {
 						<div className="register-form-group">
 							<Button
 								text="Sign Up"
-								color="purple"
-								variant="outline"
+								color="brown"
+								variant="fill"
 								size="large"
 								type="submit"
 							/>

@@ -1,12 +1,11 @@
 .register {
   width: 100vw;
   height: 100vh;
-  background-position: center;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, #c7c5f4, #776bcc);
+  background-color: var(--brown-700);
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 .register-container {
   width: 60%;
@@ -16,9 +15,9 @@
   justify-content: center;
   align-content: center;
   overflow: hidden;
-  background: linear-gradient(90deg, #5d54a4, #7c78b8);
+  background: linear-gradient(90deg, #795548, #d7ccc8);
   position: relative;
-  box-shadow: 0px 0px 24px #5c5696;
+  box-shadow: var(--shadow-3d);
 }
 @media (max-width: 900px) {
   .register-container {
@@ -50,7 +49,7 @@
 .register-background-shape__2 {
   height: 220px;
   width: 220px;
-  background: #6c63ac;
+  background: var(--brown);
   top: -172px;
   right: 0;
   border-radius: 32px;
@@ -58,7 +57,7 @@
 .register-background-shape__3 {
   height: 540px;
   width: 190px;
-  background: linear-gradient(270deg, #5d54a4, #6a679e);
+  background: linear-gradient(270deg, var(--brown-400), var(--brown-700));
   top: -24px;
   right: 0;
   border-radius: 32px;
@@ -66,7 +65,7 @@
 .register-background-shape__4 {
   height: 400px;
   width: 200px;
-  background: #7e7bb9;
+  background: var(--brown-400);
   top: 420px;
   right: 50px;
   border-radius: 60px;

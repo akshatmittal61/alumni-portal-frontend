@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.css";
 import waves from "../../images/wave.svg";
-import homeBg from "../../images/home-bg.png";
+import homeBg from "../../images/home-bg.jpg";
 import Button from "../../components/Button/Button";
 
 const Home = () => {
@@ -26,26 +26,24 @@ const Home = () => {
 					backgroundImage: `url(${waves})`,
 				}}
 			>
-				<div className="home-cover-nav">
+				<div
+					className="home-cover-nav"
+					data-aos="zoom-in"
+					data-aos-duration="1000"
+				>
 					<Button
 						text="Log In"
-						color="blue"
+						color="brown"
 						containsLink
 						link="/login"
 						size="large"
-						variant="outline"
-						data-aos="zoom-in"
-						data-aos-duration="1000"
 					/>
 					<Button
 						text="Register"
-						color="blue"
+						color="brown"
 						containsLink
 						link="/register"
 						size="large"
-						variant="outline"
-						data-aos="zoom-in"
-						data-aos-duration="1000"
 					/>
 				</div>
 			</div>

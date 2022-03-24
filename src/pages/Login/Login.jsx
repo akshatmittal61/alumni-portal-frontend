@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./login.css";
-import chips from "../../images/chips.svg";
 import loginBg from "../../images/login-bg.jpeg";
+import a from "../../images/a.svg";
 import Button from "../../components/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -30,10 +30,10 @@ const Login = () => {
 		<section
 			className="login"
 			style={{
-				backgroundImage: `url(${chips})`,
+				backgroundImage: `url(${a})`,
 			}}
 		>
-			<div className="login-container">
+			<div className="login-container" data-aos="zoom-in">
 				<div className="login-left">
 					<div className="legin-left-top">
 						<div className="login-left-title">Welcome!</div>
