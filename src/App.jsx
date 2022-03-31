@@ -9,6 +9,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Navigation from "./components/Navigation/Navigation";
 import GlobalContext from "./components/Context/GloablContext";
+import Header from "./components/Header/Header";
 
 const App = () => {
 	AOS.init();
@@ -17,26 +18,31 @@ const App = () => {
 	return (
 		<>
 			{location.pathname !== "/" &&
-				location.pathname !== "/login" &&
-				location.pathname !== "/register" && (
-					<>
-						{" "}
-						<Navigation />
-					</>
-				)}
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/register" element={<Register />} />
-				<Route
-					path="/dashboard"
-					element={
-						<PrivateRoute>
-							<Dashboard />
-						</PrivateRoute>
-					}
-				/>
-			</Routes>
+			location.pathname !== "/login" &&
+			location.pathname !== "/register" ? (
+				<>
+					<Navigation />
+					<Header />
+					<main className="main">
+						<Routes>
+							<Route
+								path="/dashboard"
+								element={
+									<PrivateRoute>
+										<Dashboard />
+									</PrivateRoute>
+								}
+							/>
+						</Routes>
+					</main>
+				</>
+			) : (
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/login" element={<Login />} />
+					<Route path="/register" element={<Register />} />
+				</Routes>
+			)}
 		</>
 	);
 };
