@@ -17,6 +17,9 @@ button {
   border: 2px solid transparent;
   outline: 2px solid transparent;
   transition: all 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .btn:hover {
   border-radius: 500px;
@@ -37,6 +40,10 @@ button {
   font-size: 1.125rem;
   padding: 1rem 1.875rem;
   font-weight: 550;
+}
+.btn .material-icons {
+  font-size: 1.1rem;
+  margin: 0 0.25rem;
 }
 .btn-white {
   background-color: var(--white);
@@ -207,6 +214,20 @@ button {
 }
 .btn-outline {
   background-color: var(--white);
+}
+.btn-neuro {
+  border: none;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+.btn-neuro:hover {
+  border-radius: 5px;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
 }
 
 .icon {

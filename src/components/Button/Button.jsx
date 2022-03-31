@@ -22,6 +22,7 @@ const Button = ({
 	else if (size === "large") classes += " btn-lg";
 	if (variant === "outline")
 		classes += ` btn-${variant} btn-${color}-outline`;
+	else if (variant === "neuro") classes += ` btn-neuro`;
 	return (
 		<>
 			{containsLink ? (

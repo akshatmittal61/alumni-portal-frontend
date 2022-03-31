@@ -38,7 +38,7 @@ const Register = () => {
 				<div className="register-content">
 					<div className="register-title">
 						<span>Sign Up</span>
-						<button className="icon" onClick={() => navigate(-1)}>
+						<button className="icon" onClick={() => navigate("/")}>
 							<span className="material-icons">close</span>
 						</button>
 					</div>

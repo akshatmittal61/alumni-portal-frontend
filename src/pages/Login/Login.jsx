@@ -95,7 +95,7 @@ const Login = () => {
 						backgroundImage: `url(${loginBg})`,
 					}}
 				>
-					<button className="icon" onClick={() => navigate(-1)}>
+					<button className="icon" onClick={() => navigate("/")}>
 						<span className="material-icons">close</span>
 					</button>
 				</div>
