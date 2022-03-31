@@ -34,6 +34,24 @@ npm run react
 
 -   Visit [localhost:3000](http://localhost:3000) to view the project
 
+# Navigation
+
+### Unauthorized Users
+
+-   Home page
+-   Login
+-   Register
+
+### Authorized Users
+
+-   Dashboard
+-   Memories
+-   People you may know
+-   Events
+-   Room to Manoeuvre
+-   Profile
+-   Settings
+
 # Author
 
 -   [Akshat Mittal](https://github.com/akshatmittal61)
