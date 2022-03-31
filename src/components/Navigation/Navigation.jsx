@@ -1,18 +1,17 @@
-import React, { useContext } from "react";
-import GlobalContext from "../Context/GloablContext";
+import React from "react";
 import navLinks from "../../navigation.js";
 import "./navigation.css";
 import { Link } from "react-router-dom";
+import favicon from "../../images/favicon.svg";
 
 const Navigation = () => {
-	const { setOpenNav } = useContext(GlobalContext);
 	return (
-		<section className="navigation">
-			<div className="navigation-pane" data-aos="fade-right">
+		<section className="navigation-container">
+			<div className="navigation">
 				<div className="navigation-head">
-					<button className="icon" onClick={() => setOpenNav(false)}>
-						<span className="material-icons">close</span>
-					</button>
+					<Link to="/">
+						<img src={favicon} alt="Alumni Portal" />
+					</Link>
 				</div>
 				<div className="navigation-body">
 					<nav className="navigation-nav">
@@ -26,7 +25,7 @@ const Navigation = () => {
 											</span>
 										</span>
 										<span className="navigation-nav-li__text">
-											<span>{navLink.title}</span>
+											{navLink.title}
 										</span>
 									</Link>
 								</li>
@@ -35,10 +34,6 @@ const Navigation = () => {
 					</nav>
 				</div>
 			</div>
-			<div
-				className="navigation-cover"
-				onClick={() => setOpenNav(false)}
-			></div>
 		</section>
 	);
 };

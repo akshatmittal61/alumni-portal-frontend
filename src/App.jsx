@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -12,10 +12,18 @@ import GlobalContext from "./components/Context/GloablContext";
 
 const App = () => {
 	AOS.init();
-	const { openNav, isAuthenticated } = useContext(GlobalContext);
+	const location = useLocation();
+	const { openNav } = useContext(GlobalContext);
 	return (
 		<>
-			{openNav && isAuthenticated && <Navigation />}
+			{location.pathname !== "/" &&
+				location.pathname !== "/login" &&
+				location.pathname !== "/register" && (
+					<>
+						{" "}
+						<Navigation />
+					</>
+				)}
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/login" element={<Login />} />
