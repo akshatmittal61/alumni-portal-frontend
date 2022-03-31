@@ -4,8 +4,9 @@ import axios from "axios";
 const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
-	const [isAuthenticated, setIsAuthenticated] = useState(false);
+	const [isAuthenticated, setIsAuthenticated] = useState(true);
 	const [isLoading, setIsLoading] = useState(false);
+	const [openNav, setOpenNav] = useState(true);
 	const axiosInstance = axios.create({
 		baseURL: "http://localhost:5000/",
 	});
@@ -16,6 +17,8 @@ export const GlobalProvider = ({ children }) => {
 				setIsAuthenticated,
 				isLoading,
 				setIsLoading,
+				openNav,
+				setOpenNav,
 				axiosInstance,
 			}}
 		>

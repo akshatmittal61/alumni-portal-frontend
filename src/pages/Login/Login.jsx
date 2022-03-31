@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./login.css";
 import loginBg from "../../images/login-bg.jpeg";
 import a from "../../images/a.svg";
 import Button from "../../components/Button/Button";
 import { Link, useNavigate } from "react-router-dom";
+import GlobalContext from "../../components/Context/GloablContext";
 
 const Login = () => {
+	const { isAuthenticated, setIsAuthenticated } = useContext(GlobalContext);
 	const [user, setUser] = useState({
 		username: "",
 		password: "",
@@ -25,7 +27,12 @@ const Login = () => {
 			username: "",
 			password: "",
 		});
+		setIsAuthenticated(true);
+		navigate("/dashboard");
 	};
+	useEffect(() => {
+		if (isAuthenticated) navigate("/dashboard");
+	}, [isAuthenticated, navigate]);
 	return (
 		<section
 			className="login"

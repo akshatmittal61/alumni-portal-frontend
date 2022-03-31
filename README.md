@@ -45,12 +45,12 @@ npm run react
 ### Authorized Users
 
 -   Dashboard
+-   Profile
+-   Settings
 -   Memories
 -   People you may know
 -   Events
 -   Room to Manoeuvre
--   Profile
--   Settings
 
 # Author
 

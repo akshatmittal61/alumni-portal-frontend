@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import AOS from "aos";
@@ -7,11 +7,15 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import PrivateRoute from "./components/PrivateRoute";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Navigation from "./components/Navigation/Navigation";
+import GlobalContext from "./components/Context/GloablContext";
 
 const App = () => {
 	AOS.init();
+	const { openNav, isAuthenticated } = useContext(GlobalContext);
 	return (
 		<>
+			{openNav && isAuthenticated && <Navigation />}
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/login" element={<Login />} />

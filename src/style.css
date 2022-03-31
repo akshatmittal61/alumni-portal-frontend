@@ -21,11 +21,13 @@
   --back-shadow: rgba(0, 0, 0, 0.2);
   --back-shadow-dark: rgba(0, 0, 0, 0.25);
   --back-shadow-light: rgba(0, 0, 0, 0.1);
-  --transition-time: 200ms;
   --shadow-3d: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   	0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
   	0 22.3px 17.9px rgba(0, 0, 0, 0.072),
   	0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  --side-width: 25%;
+  --head-height: 12vh;
+  --transition-time: 200ms;
   --white: #ffffff;
   --black: #000000;
   --transparent: transparent;
@@ -285,6 +287,17 @@
     width: 10%;
   }
 }
+@media (max-width: 880px) {
+  :root {
+    --side-width: 35%;
+  }
+}
+@media (max-width: 672px) {
+  :root {
+    --side-width: 50%;
+  }
+}
+
 html {
   font-size: 16px;
 }
@@ -305,7 +318,7 @@ body {
   font-size: 1rem;
   font-family: Cabin, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-flow: column;
   letter-spacing: 0.025rem;
@@ -316,7 +329,7 @@ body {
 
 #root {
   width: 100%;
-  max-height: 100%;
+  height: 100%;
 }
 
 a {
