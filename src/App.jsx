@@ -23,7 +23,15 @@ const App = () => {
 				<>
 					<Navigation />
 					<Header />
-					<main className="main">
+					<main
+						className="main"
+						style={{
+							left: openNav ? "var(--side-width)" : "7.5rem",
+							width: openNav
+								? "calc(100vw - var(--side-width))"
+								: "calc(100vw - 7.5rem)",
+						}}
+					>
 						<Routes>
 							<Route
 								path="/dashboard"

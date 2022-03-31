@@ -46,6 +46,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .header-right-user img {
   object-fit: cover;
