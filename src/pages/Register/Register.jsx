@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
+import Chip from "../../components/Chip/Chip";
 import "./register.css";
 
 const Register = () => {
@@ -12,6 +13,7 @@ const Register = () => {
 		username: "",
 		password: "",
 		confirmPassword: "",
+		role: "",
 	});
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -30,8 +32,31 @@ const Register = () => {
 			username: "",
 			password: "",
 			confirmPassword: "",
+			role: "",
 		});
 	};
+	const roles = [
+		{
+			title: "Student",
+			value: "student",
+			color: "green",
+		},
+		{
+			title: "Faculty",
+			value: "faculty",
+			color: "orange",
+		},
+		{
+			title: "Admin",
+			value: "admin",
+			color: "red",
+		},
+		{
+			title: "Alumni",
+			value: "alumni",
+			color: "blue",
+		},
+	];
 	return (
 		<section className="register">
 			<div className="register-container" data-aos="zoom-in">
@@ -110,6 +135,43 @@ const Register = () => {
 								onChange={handleChange}
 								placeholder="Confirm Password"
 							/>
+						</div>
+						<div
+							className="register-form-group register-form-radio"
+							style={{
+								justifyContent: "space-evenly",
+							}}
+						>
+							<span className="register-form-radio-span">
+								Choose your role:{" "}
+							</span>
+							{roles.map((role, index) => (
+								<label key={index}>
+									<input
+										type="radio"
+										name="role"
+										value={role.value}
+										onChange={handleChange}
+										placeholder={role.title}
+									/>
+									<Chip
+										text={role.title}
+										color={role.color}
+										onClick={(e) => {
+											e.preventDefault();
+											setUser({
+												...user,
+												role: role.value,
+											});
+										}}
+										variant={
+											user.role === role.value
+												? "fill"
+												: "outline"
+										}
+									/>
+								</label>
+							))}
 						</div>
 						<div className="register-form-group">
 							<Button

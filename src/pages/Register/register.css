@@ -74,7 +74,7 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   flex-flow: column;
   z-index: 5;
@@ -102,7 +102,6 @@
 }
 .register-form {
   width: 100%;
-  height: 50%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -114,6 +113,10 @@
   justify-content: space-between;
   align-items: center;
   margin: 1rem 0;
+}
+.register-form-group:last-child button {
+  width: 40%;
+  margin: 0 auto;
 }
 .register-form label {
   color: var(--bgcolor);
@@ -140,17 +143,20 @@
 .register-form input:focus + label {
   color: var(--bgcolor-700);
 }
-.register-form button {
-  width: 40%;
-  margin: 0 auto;
+.register-form-radio span {
+  color: var(--white);
+  font-size: 1.125rem;
+}
+.register-form-radio input {
+  display: none;
 }
 .register-bottom {
-  height: 30%;
   color: var(--white);
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-flow: row;
+  margin: 1rem 0 0 0;
   padding: 1rem;
   font-size: 0.875rem;
 }

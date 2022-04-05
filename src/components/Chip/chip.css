@@ -1,0 +1,29 @@
+.chip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 500px;
+  margin: 0.25rem;
+  padding: 0.5rem 1.15rem;
+  border: 2.5px solid var(--green);
+  outline: 0px solid transparent;
+  white-space: nowrap;
+  transition: all 0.5s ease-in-out;
+  color: inherit;
+  cursor: pointer;
+}
+.chip-sm {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  border-width: 2px;
+}
+.chip-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  border-width: 3px;
+}
+.chip:hover, .chip:active, .chip:focus {
+  outline: 1px solid var(--green);
+}
+
+/*# sourceMappingURL=chip.css.map */
