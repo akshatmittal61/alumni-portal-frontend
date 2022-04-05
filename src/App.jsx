@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import AOS from "aos";
@@ -14,7 +14,13 @@ import Header from "./components/Header/Header";
 const App = () => {
 	AOS.init();
 	const location = useLocation();
-	const { openNav } = useContext(GlobalContext);
+	const { openNav, setIsAuthenticated } = useContext(GlobalContext);
+	useEffect(() => {
+		let isLocalAuthenticated = localStorage.getItem("isAuthenticated");
+		if (isLocalAuthenticated)
+			setIsAuthenticated(JSON.parse(isLocalAuthenticated));
+		else setIsAuthenticated(false);
+	}, [setIsAuthenticated]);
 	return (
 		<>
 			{location.pathname !== "/" &&

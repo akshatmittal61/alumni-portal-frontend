@@ -4,7 +4,10 @@ import axios from "axios";
 const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
-	const [isAuthenticated, setIsAuthenticated] = useState(true);
+	const isLocalAuthenticated = localStorage.getItem("isAuthenticated");
+	const [isAuthenticated, setIsAuthenticated] = useState(
+		JSON.parse(isLocalAuthenticated)
+	);
 	const [isLoading, setIsLoading] = useState(false);
 	const [openNav, setOpenNav] = useState(true);
 	const axiosInstance = axios.create({

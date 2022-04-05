@@ -9,6 +9,10 @@ const Header = () => {
 	const { openNav, setOpenNav, setIsAuthenticated } =
 		useContext(GlobalContext);
 	const [openUserMenu, setOpenUserMenu] = useState(false);
+	const logoutUser = () => {
+		setIsAuthenticated(false);
+		localStorage.setItem("isAuthenticated", false);
+	};
 	return (
 		<section
 			className="header-container"
@@ -77,7 +81,7 @@ const Header = () => {
 								style={{
 									display: "flex",
 								}}
-								onClick={() => setIsAuthenticated(false)}
+								onClick={() => logoutUser()}
 							/>
 						</div>
 					</div>

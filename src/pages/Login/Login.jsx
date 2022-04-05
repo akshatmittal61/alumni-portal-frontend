@@ -28,6 +28,7 @@ const Login = () => {
 			password: "",
 		});
 		setIsAuthenticated(true);
+		localStorage.setItem("isAuthenticated", true);
 		navigate("/dashboard");
 	};
 	useEffect(() => {

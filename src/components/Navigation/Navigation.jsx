@@ -63,11 +63,26 @@ const Navigation = () => {
 												{navLink.icon}
 											</span>
 										</span>
-										{openNav && (
-											<span className="navigation-nav-li__text">
-												{navLink.title}
-											</span>
-										)}
+										<span
+											className="navigation-nav-li__text"
+											style={{
+												opacity: openNav ? "1" : "0",
+												width: openNav
+													? "fit-content"
+													: "0",
+												visibility: openNav
+													? "visible"
+													: "hidden",
+												padding: openNav
+													? "0.25rem 1rem"
+													: "0",
+												margin: openNav
+													? "0 0.25rem"
+													: "0",
+											}}
+										>
+											{navLink.title}
+										</span>
 									</Link>
 								</li>
 							))}
