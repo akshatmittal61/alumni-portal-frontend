@@ -1,12 +1,11 @@
 import React, { useContext, useState } from "react";
 import GlobalContext from "../Context/GloablContext";
-import man from "../../images/man.svg";
 import "./header.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
 const Header = () => {
-	const { openNav, setOpenNav, setIsAuthenticated } =
+	const { openNav, setOpenNav, setIsAuthenticated, user } =
 		useContext(GlobalContext);
 	const [openUserMenu, setOpenUserMenu] = useState(false);
 	const logoutUser = () => {
@@ -34,7 +33,7 @@ const Header = () => {
 					onClick={() => setOpenUserMenu(true)}
 				>
 					<div className="header-right-user">
-						<img src={man} alt="Man" />
+						<img src={user.avatar} alt="Man" />
 					</div>
 				</div>
 			</header>

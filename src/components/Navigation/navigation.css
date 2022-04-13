@@ -5,15 +5,15 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-flow: column;
-  border-radius: 16px;
-  background: #e0e0e0;
+  border-radius: var(--neu-border-radius);
+  background: var(--neu-bgcolor);
   box-shadow: 12px 12px 24px #c7c7c7, -12px -12px 24px #f9f9f9;
 }
 .navigation-container {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 15;
+  z-index: 0;
   width: var(--side-width);
   height: 100vh;
   display: flex;
@@ -85,7 +85,7 @@
   align-items: center;
   background-color: var(--bgcolor);
   transition: all var(--transition-time) ease-in-out;
-  background: #e0e0e0;
+  background: var(--neu-bgcolor);
   box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
 }
 .navigation-nav-li:hover a > * {

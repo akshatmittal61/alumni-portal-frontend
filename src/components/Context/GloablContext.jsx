@@ -10,6 +10,20 @@ export const GlobalProvider = ({ children }) => {
 	);
 	const [isLoading, setIsLoading] = useState(false);
 	const [openNav, setOpenNav] = useState(true);
+	const [user, setUser] = useState({
+		name: "Akshat Mittal",
+		status: "Developing",
+		email: "akshatmittal2506@gmail.com",
+		phone: 9456849466,
+		username: "akshatmittal61",
+		batch: "2020",
+		bio: "MERN Stack developer",
+		currentOrganization: "MERN",
+		desgination: "MERN Stack Developer",
+		dob: "2002-06-25",
+		gender: "Male",
+		avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+	});
 	const axiosInstance = axios.create({
 		baseURL: "http://localhost:5000/",
 	});
@@ -23,6 +37,8 @@ export const GlobalProvider = ({ children }) => {
 				openNav,
 				setOpenNav,
 				axiosInstance,
+				user,
+				setUser,
 			}}
 		>
 			{children}
