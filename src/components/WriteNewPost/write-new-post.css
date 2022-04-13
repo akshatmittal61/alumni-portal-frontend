@@ -72,7 +72,7 @@
   color: var(--tcolor);
 }
 .write-new-post-body-name span:last-child {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--tcolor-100);
 }
 .write-new-post-body-content {

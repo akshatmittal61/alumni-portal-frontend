@@ -5,7 +5,7 @@ import "./dashboard.css";
 
 const Dashboard = () => {
 	const { user } = useContext(GlobalContext);
-	const [showWritePostBox, setShowWritePostBox] = useState(true);
+	const [showWritePostBox, setShowWritePostBox] = useState(false);
 	return (
 		<section className="dashboard-container">
 			<div className="dashboard-head">
