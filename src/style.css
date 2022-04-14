@@ -368,9 +368,10 @@ select::placeholder {
 .main {
   width: calc(100% - var(--side-width));
   height: calc(100% - var(--head-height));
-  position: fixed;
+  position: absolute;
   top: var(--head-height);
   left: var(--side-width);
+  z-index: 0;
   padding: 1rem;
 }
 

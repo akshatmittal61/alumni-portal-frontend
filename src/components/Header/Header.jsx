@@ -3,6 +3,7 @@ import GlobalContext from "../Context/GloablContext";
 import "./header.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
+import HeaderUserMenu from "./HeaderUserMenu";
 
 const Header = () => {
 	const { openNav, setOpenNav, setIsAuthenticated, user } =
@@ -33,58 +34,15 @@ const Header = () => {
 					onClick={() => setOpenUserMenu(true)}
 				>
 					<div className="header-right-user">
-						<img src={user.avatar} alt="Man" />
+						<img src={user.avatar} alt={user.name} />
 					</div>
 				</div>
 			</header>
 			{openUserMenu && (
-				<div
-					className="header-user-menu"
-					onClick={() => setOpenUserMenu(false)}
-				>
-					<div className="header-user-menu-box" data-aos="fade-down">
-						<div className="header-user-menu-box-top">
-							<Link to="/profile">
-								<div className="header-user-menu-box__icon">
-									<span className="material-icons">
-										account_circle
-									</span>
-								</div>
-								<div className="header-user-menu-box__text">
-									Profile
-								</div>
-							</Link>
-							<Link to="/settings">
-								<div className="header-user-menu-box__icon">
-									<span className="material-icons">
-										settings
-									</span>
-								</div>
-								<div className="header-user-menu-box__text">
-									Settings
-								</div>
-							</Link>
-						</div>
-						<div className="header-user-menu-box-bottom">
-							<Button
-								text={
-									<>
-										<span className="material-icons">
-											logout
-										</span>
-										<span>Logout</span>
-									</>
-								}
-								color="Blue"
-								variant="neuro"
-								style={{
-									display: "flex",
-								}}
-								onClick={() => logoutUser()}
-							/>
-						</div>
-					</div>
-				</div>
+				<HeaderUserMenu
+					logout={logoutUser}
+					close={() => setOpenUserMenu(false)}
+				/>
 			)}
 		</section>
 	);
