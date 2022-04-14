@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
 import GlobalContext from "../Context/GloablContext";
 import "./header.css";
-import { Link } from "react-router-dom";
-import Button from "../Button/Button";
 import HeaderUserMenu from "./HeaderUserMenu";
 
 const Header = () => {
