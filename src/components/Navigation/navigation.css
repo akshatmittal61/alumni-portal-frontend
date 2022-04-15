@@ -10,12 +10,12 @@
   box-shadow: 12px 12px 24px #c7c7c7, -12px -12px 24px #f9f9f9;
 }
 .navigation-container {
+  width: var(--side-width);
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  width: var(--side-width);
-  height: 100vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;

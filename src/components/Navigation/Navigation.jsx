@@ -6,19 +6,31 @@ import favicon from "../../images/favicon.svg";
 import GlobalContext from "../Context/GloablContext.jsx";
 
 const Navigation = () => {
-	const { openNav } = useContext(GlobalContext);
+	const { openNav, breakpoint } = useContext(GlobalContext);
 	return (
 		<section
 			className="navigation-container"
 			style={{
-				width: openNav ? "var(--side-width)" : "7.5rem",
+				width: breakpoint("mobile")
+					? "var(--side-width)"
+					: openNav
+					? "var(--side-width)"
+					: "7.5rem",
+				top: breakpoint("mobile") ? "var(--head-height)" : 0,
+				transform: breakpoint("mobile")?(
+					openNav?"none":'translateX(-100%)'
+				):"none"
 			}}
 		>
 			<div className="navigation" data-aos="fade-right">
 				<div
 					className="navigation-head"
 					style={{
-						justifyContent: openNav ? "flex-start" : "center",
+						justifyContent: breakpoint("mobile")
+							? "flex-start"
+							: openNav
+							? "flex-start"
+							: "center",
 					}}
 				>
 					<Link to="/">
@@ -29,13 +41,21 @@ const Navigation = () => {
 					<nav
 						className="navigation-nav"
 						style={{
-							width: openNav ? "90%" : "100%",
+							width: breakpoint("mobile")
+								? "90%"
+								: openNav
+								? "90%"
+								: "100%",
 						}}
 					>
 						<ul
 							className="navigation-nav-ul"
 							style={{
-								alignItems: openNav ? "flex-start" : "center",
+								alignItems: breakpoint("mobile")
+									? "flex-start"
+									: openNav
+									? "flex-start"
+									: "center",
 							}}
 						>
 							{navLinks.map((navLink, index) => (
@@ -44,10 +64,16 @@ const Navigation = () => {
 										<span
 											className="navigation-nav-li__icon"
 											style={{
-												borderRadius: openNav
+												borderRadius: breakpoint(
+													"mobile"
+												)
+													? "500px"
+													: openNav
 													? "500px"
 													: "12px",
-												padding: openNav
+												padding: breakpoint("mobile")
+													? "0.5rem"
+													: openNav
 													? "0.5rem"
 													: "0.7rem",
 											}}
@@ -55,7 +81,11 @@ const Navigation = () => {
 											<span
 												className="material-icons"
 												style={{
-													fontSize: openNav
+													fontSize: breakpoint(
+														"mobile"
+													)
+														? "1.5rem"
+														: openNav
 														? "1.5rem"
 														: "1.75rem",
 												}}
@@ -65,21 +95,35 @@ const Navigation = () => {
 										</span>
 										<span
 											className="navigation-nav-li__text"
-											style={{
-												opacity: openNav ? "1" : "0",
-												width: openNav
-													? "fit-content"
-													: "0",
-												visibility: openNav
-													? "visible"
-													: "hidden",
-												padding: openNav
-													? "0.25rem 1rem"
-													: "0",
-												margin: openNav
-													? "0 0.25rem"
-													: "0",
-											}}
+											style={
+												breakpoint("mobile")
+													? {
+															opacity: 1,
+															width: "fit-content",
+															visibility:
+																"visible",
+															padding:
+																"0.25rem 1rem",
+															margin: "0 0.25rem",
+													  }
+													: {
+															opacity: openNav
+																? "1"
+																: "0",
+															width: openNav
+																? "fit-content"
+																: "0",
+															visibility: openNav
+																? "visible"
+																: "hidden",
+															padding: openNav
+																? "0.25rem 1rem"
+																: "0",
+															margin: openNav
+																? "0 0.25rem"
+																: "0",
+													  }
+											}
 										>
 											{navLink.title}
 										</span>

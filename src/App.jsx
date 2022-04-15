@@ -14,13 +14,14 @@ import Header from "./components/Header/Header";
 const App = () => {
 	AOS.init();
 	const location = useLocation();
-	const { openNav, setIsAuthenticated } = useContext(GlobalContext);
+	const { openNav, setOpenNav, setIsAuthenticated, breakpoint } =
+		useContext(GlobalContext);
 	useEffect(() => {
 		let isLocalAuthenticated = localStorage.getItem("isAuthenticated");
 		if (isLocalAuthenticated)
 			setIsAuthenticated(JSON.parse(isLocalAuthenticated));
-		else setIsAuthenticated(false);
-	}, [setIsAuthenticated]);
+		else setIsAuthenticated(true);
+	}, [breakpoint, setIsAuthenticated]);
 	return (
 		<>
 			{location.pathname !== "/" &&
@@ -32,8 +33,14 @@ const App = () => {
 					<main
 						className="main"
 						style={{
-							left: openNav ? "var(--side-width)" : "7.5rem",
-							width: openNav
+							left: breakpoint("mobile")
+								? 0
+								: openNav
+								? "var(--side-width)"
+								: "7.5rem",
+							width: breakpoint("mobile")
+								? "100vw"
+								: openNav
 								? "calc(100vw - var(--side-width))"
 								: "calc(100vw - 7.5rem)",
 						}}

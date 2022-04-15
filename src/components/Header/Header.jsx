@@ -4,7 +4,7 @@ import "./header.css";
 import HeaderUserMenu from "./HeaderUserMenu";
 
 const Header = () => {
-	const { openNav, setOpenNav, setIsAuthenticated, user } =
+	const { openNav, setOpenNav, setIsAuthenticated, user, breakpoint } =
 		useContext(GlobalContext);
 	const [openUserMenu, setOpenUserMenu] = useState(false);
 	const logoutUser = () => {
@@ -15,10 +15,19 @@ const Header = () => {
 		<section
 			className="header-container"
 			style={{
-				left: openNav ? "var(--side-width)" : "7.5rem",
-				width: openNav
+				left: breakpoint("mobile")
+					? 0
+					: openNav
+					? "var(--side-width)"
+					: "7.5rem",
+				width: breakpoint("mobile")
+					? "100vw"
+					: openNav
 					? "calc(100vw - var(--side-width))"
 					: "calc(100vw - 7.5rem)",
+				padding: breakpoint("mobile")
+					? "1rem 0.5rem 0 0.5rem"
+					: "1rem 1rem 0 0",
 			}}
 		>
 			<header className="header" data-aos="fade-down">

@@ -5,7 +5,7 @@ import WriteNewPost from "../../components/WriteNewPost/WriteNewPost";
 import "./dashboard.css";
 
 const Dashboard = () => {
-	const { user, openNav } = useContext(GlobalContext);
+	const { user, openNav, breakpoint } = useContext(GlobalContext);
 	const [showWritePostBox, setShowWritePostBox] = useState(false);
 	const [posts, setPosts] = useState([
 		{
@@ -37,7 +37,7 @@ const Dashboard = () => {
 		{
 			id: 1,
 			content:
-				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
+				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-der i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-der i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-der i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-der i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-der i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
 			author: {
 				name: "Akshat Mittal",
 				email: "akshatmittal2506@gmail.com",
@@ -64,6 +64,109 @@ const Dashboard = () => {
 			id: 2,
 			content:
 				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
+			author: {
+				name: "Akshat Mittal",
+				email: "akshatmittal2506@gmail.com",
+				username: "akshatmittal61",
+				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+			},
+			likes: {
+				status: false,
+				count: 3,
+			},
+			comments: [
+				{
+					author: {
+						name: "Akshat Mittal",
+						email: "akshatmittal2506@gmail.com",
+						username: "akshatmittal61",
+						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+					},
+					text: "It was a good one",
+				},
+			],
+		},
+		{
+			id: 3,
+			content:
+				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived,i’m either hungry, dehydrated, sleep-deprived,i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
+			author: {
+				name: "Akshat Mittal",
+				email: "akshatmittal2506@gmail.com",
+				username: "akshatmittal61",
+				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+			},
+			likes: {
+				status: false,
+				count: 3,
+			},
+			comments: [
+				{
+					author: {
+						name: "Akshat Mittal",
+						email: "akshatmittal2506@gmail.com",
+						username: "akshatmittal61",
+						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+					},
+					text: "It was a good one",
+				},
+			],
+		},
+		{
+			id: 4,
+			content: "whenever i feel sad, it pretty much always txcrisis!",
+			author: {
+				name: "Akshat Mittal",
+				email: "akshatmittal2506@gmail.com",
+				username: "akshatmittal61",
+				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+			},
+			likes: {
+				status: false,
+				count: 3,
+			},
+			comments: [
+				{
+					author: {
+						name: "Akshat Mittal",
+						email: "akshatmittal2506@gmail.com",
+						username: "akshatmittal61",
+						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+					},
+					text: "It was a good one",
+				},
+			],
+		},
+		{
+			id: 5,
+			content:
+				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
+			author: {
+				name: "Akshat Mittal",
+				email: "akshatmittal2506@gmail.com",
+				username: "akshatmittal61",
+				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+			},
+			likes: {
+				status: false,
+				count: 3,
+			},
+			comments: [
+				{
+					author: {
+						name: "Akshat Mittal",
+						email: "akshatmittal2506@gmail.com",
+						username: "akshatmittal61",
+						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+					},
+					text: "It was a good one",
+				},
+			],
+		},
+		{
+			id: 6,
+			content:
+				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, surns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
 			author: {
 				name: "Akshat Mittal",
 				email: "akshatmittal2506@gmail.com",
@@ -125,12 +228,23 @@ const Dashboard = () => {
 			</div>
 			<div className="dashboard-body">
 				<div className="dashboard-posts">
-					<div className="row">
-						{posts.map((post) => (
+					<div
+						className={`responsive-masonry responsive-masonry-layout-${
+							breakpoint("mobile")
+								? "1"
+								: breakpoint("tab")
+								? openNav
+									? "1"
+									: "2"
+								: openNav
+								? "2"
+								: "3"
+						}`}
+					>
+						{posts.map((post, index) => (
 							<div
-								className={`col-lg-${
-									openNav ? "50" : "33"
-								} col-md-50 col-sm-100`}
+								className={`responsive-masonry-box`}
+								key={index}
 							>
 								<Post post={post} likePost={likePost} />
 							</div>

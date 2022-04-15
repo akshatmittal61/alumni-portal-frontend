@@ -15,8 +15,8 @@
   height: var(--head-height);
   position: fixed;
   top: 0;
-  z-index: 100;
   left: var(--side-width);
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: flex-end;

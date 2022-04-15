@@ -1,7 +1,6 @@
 .post {
   width: 100%;
   height: 100%;
-  margin: 1rem;
   padding: 0 0.5rem;
   border: 1px solid var(--back-shadow);
   border-radius: 5px;
@@ -9,6 +8,14 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-flow: column;
+}
+.post-box {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .post-author {
   width: 100%;
@@ -37,14 +44,17 @@
   align-items: flex-start;
   flex-flow: column;
 }
-.post-author-details span {
+.post-author-details span, .post-author-details a {
   padding: 0 0.5rem;
 }
-.post-author-details span:first-child {
+.post-author-details span:first-child, .post-author-details a:first-child {
   font-size: 1.1rem;
 }
-.post-author-details span:last-child {
+.post-author-details span:last-child, .post-author-details a:last-child {
   font-size: 0.875rem;
+}
+.post-author-details a:hover {
+  text-decoration: underline;
 }
 .post-content {
   padding: 0.25rem;

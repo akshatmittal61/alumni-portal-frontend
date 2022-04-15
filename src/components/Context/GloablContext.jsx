@@ -4,12 +4,19 @@ import axios from "axios";
 const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
+	const breakpoint = (device) => {
+		if (device === "mobile") return window.innerWidth < 672;
+		else if (device === "tab") return window.innerWidth <= 880;
+		else return window.innerWidth > 880;
+	};
 	const isLocalAuthenticated = localStorage.getItem("isAuthenticated");
 	const [isAuthenticated, setIsAuthenticated] = useState(
 		JSON.parse(isLocalAuthenticated)
 	);
 	const [isLoading, setIsLoading] = useState(false);
-	const [openNav, setOpenNav] = useState(true);
+	const [openNav, setOpenNav] = useState(
+		breakpoint("mobile") || breakpoint("tab") ? false : true
+	);
 	const [user, setUser] = useState({
 		name: "Akshat Mittal",
 		status: "Developing",
@@ -39,6 +46,7 @@ export const GlobalProvider = ({ children }) => {
 				axiosInstance,
 				user,
 				setUser,
+				breakpoint,
 			}}
 		>
 			{children}
