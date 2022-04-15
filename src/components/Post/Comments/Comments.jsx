@@ -35,6 +35,9 @@ const Comments = ({ close, comments, submit }) => {
 			time: "",
 		});
 	};
+	const likeComment = (id) => {
+		console.log(`Like a comment with id: ${id}`);
+	};
 	return (
 		<Popup close={close}>
 			<div className="comments">
@@ -98,7 +101,10 @@ const Comments = ({ close, comments, submit }) => {
 									{comment.content}
 								</div>
 								<div className="post-stats">
-									<button className="post-stats-btn post-stats-like">
+									<button
+										className="post-stats-btn post-stats-like"
+										onClick={() => likeComment(comment.id)}
+									>
 										<span className="material-icons">
 											{comment.likes.status
 												? "favorite"

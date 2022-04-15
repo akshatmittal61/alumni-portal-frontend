@@ -28,8 +28,10 @@
 }
 .popup-head button {
   position: absolute;
-  left: 100%;
-  transform: translateX(-2.5rem);
+  left: calc(100% - 2.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .popup-head-title {
   font-size: 1.25rem;
