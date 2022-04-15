@@ -19,6 +19,85 @@ const Dashboard = () => {
 				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
 			},
 			likes: {
+				status: true,
+				count: 4,
+			},
+			comments: [
+				{
+					id: "656asdc6a",
+					content: "It was a good one",
+					author: {
+						name: "Akshat Mittal",
+						email: "akshatmittal2506@gmail.com",
+						username: "akshatmittal61",
+						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+					},
+					time: "Fri Apr 15 2022 16:35:00 GMT+0530 (India Standard Time)",
+					likes: {
+						status: false,
+						count: 1,
+					},
+				},
+			],
+		},
+		{
+			id: 1,
+			content:
+				"whenever i feel sad, it pretty much always tuhenever i feel sad, it pretty much always tuhenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
+			author: {
+				name: "Akshat Khosya",
+				email: "akshatdps12@gmail.com",
+				username: "akshat-khosya",
+				avatar: "https://avatars.githubusercontent.com/u/76739180?v=4",
+			},
+			likes: {
+				status: false,
+				count: 3,
+			},
+			comments: [
+				{
+					id: "656asdc6a",
+					content: "dkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aacdkvjbdvbflab aca aac",
+					author: {
+						name: "Akshat Mittal",
+						email: "akshatmittal2506@gmail.com",
+						username: "akshatmittal61",
+						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+					},
+					time: "Fri Apr 15 2022 16:35:00 GMT+0530 (India Standard Time)",
+					likes: {
+						status: false,
+						count: 1,
+					},
+				},
+				{
+					id: "656assdvc6a",
+					content: "It was a good one",
+					author: {
+						name: "Shub",
+						email: "shubhamagarwal@gmail.com",
+						username: "am-shubhagarwal",
+						avatar: "https://avatars.githubusercontent.com/u/81064287?v=4",
+					},
+					time: "Fri Apr 15 2022 16:35:00 GMT+0530 (India Standard Time)",
+					likes: {
+						status: true,
+						count: 6,
+					},
+				},
+			],
+		},
+		{
+			id: 3,
+			content:
+				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
+			author: {
+				name: "Saurabh",
+				email: "saurabh@gmail.com",
+				username: "saurabh",
+				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+			},
+			likes: {
 				status: false,
 				count: 3,
 			},
