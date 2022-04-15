@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Comments from "./Comments/Comments";
 import "./post.css";
 
-const Post = ({ post, likePost }) => {
+const Post = ({ post, likePost, addComment }) => {
 	const { author, content, likes, comments } = post;
+	const [showCommentBox, setShowCommentBox] = useState(false);
+	const submit = (comment) => {
+		addComment(post.id, comment);
+	};
 	return (
 		<div className="post-box">
 			<div className="post">
@@ -24,7 +29,7 @@ const Post = ({ post, likePost }) => {
 				<div className="post-content">{content}</div>
 				<div className="post-stats">
 					<button
-						className="post-stat-btn post-stat-like"
+						className="post-stats-btn post-stats-like"
 						onClick={() => likePost(post.id)}
 					>
 						<span className="material-icons">
@@ -32,7 +37,10 @@ const Post = ({ post, likePost }) => {
 						</span>
 						{likes.count !== 0 && <span>{likes.count}</span>}
 					</button>
-					<button className="post-stat-btn post-stat-comment">
+					<button
+						className="post-stats-btn post-stats-comment"
+						onClick={() => setShowCommentBox(true)}
+					>
 						<span className="material-icons">
 							chat_bubble_outline
 						</span>
@@ -42,6 +50,13 @@ const Post = ({ post, likePost }) => {
 					</button>
 				</div>
 			</div>
+			{showCommentBox && (
+				<Comments
+					comments={comments}
+					close={() => setShowCommentBox(false)}
+					submit={submit}
+				/>
+			)}
 		</div>
 	);
 };

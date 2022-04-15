@@ -24,175 +24,25 @@ const Dashboard = () => {
 			},
 			comments: [
 				{
+					id: "656asdc6a",
+					content: "It was a good one",
 					author: {
 						name: "Akshat Mittal",
 						email: "akshatmittal2506@gmail.com",
 						username: "akshatmittal61",
 						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
 					},
-					text: "It was a good one",
-				},
-			],
-		},
-		{
-			id: 1,
-			content:
-				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-der i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-der i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-der i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-der i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-der i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
-			author: {
-				name: "Akshat Mittal",
-				email: "akshatmittal2506@gmail.com",
-				username: "akshatmittal61",
-				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
-			},
-			likes: {
-				status: false,
-				count: 3,
-			},
-			comments: [
-				{
-					author: {
-						name: "Akshat Mittal",
-						email: "akshatmittal2506@gmail.com",
-						username: "akshatmittal61",
-						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+					time: "Fri Apr 15 2022 16:35:00 GMT+0530 (India Standard Time)",
+					likes: {
+						status: false,
+						count: 1,
 					},
-					text: "It was a good one",
-				},
-			],
-		},
-		{
-			id: 2,
-			content:
-				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
-			author: {
-				name: "Akshat Mittal",
-				email: "akshatmittal2506@gmail.com",
-				username: "akshatmittal61",
-				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
-			},
-			likes: {
-				status: false,
-				count: 3,
-			},
-			comments: [
-				{
-					author: {
-						name: "Akshat Mittal",
-						email: "akshatmittal2506@gmail.com",
-						username: "akshatmittal61",
-						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
-					},
-					text: "It was a good one",
-				},
-			],
-		},
-		{
-			id: 3,
-			content:
-				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived,i’m either hungry, dehydrated, sleep-deprived,i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
-			author: {
-				name: "Akshat Mittal",
-				email: "akshatmittal2506@gmail.com",
-				username: "akshatmittal61",
-				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
-			},
-			likes: {
-				status: false,
-				count: 3,
-			},
-			comments: [
-				{
-					author: {
-						name: "Akshat Mittal",
-						email: "akshatmittal2506@gmail.com",
-						username: "akshatmittal61",
-						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
-					},
-					text: "It was a good one",
-				},
-			],
-		},
-		{
-			id: 4,
-			content: "whenever i feel sad, it pretty much always txcrisis!",
-			author: {
-				name: "Akshat Mittal",
-				email: "akshatmittal2506@gmail.com",
-				username: "akshatmittal61",
-				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
-			},
-			likes: {
-				status: false,
-				count: 3,
-			},
-			comments: [
-				{
-					author: {
-						name: "Akshat Mittal",
-						email: "akshatmittal2506@gmail.com",
-						username: "akshatmittal61",
-						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
-					},
-					text: "It was a good one",
-				},
-			],
-		},
-		{
-			id: 5,
-			content:
-				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
-			author: {
-				name: "Akshat Mittal",
-				email: "akshatmittal2506@gmail.com",
-				username: "akshatmittal61",
-				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
-			},
-			likes: {
-				status: false,
-				count: 3,
-			},
-			comments: [
-				{
-					author: {
-						name: "Akshat Mittal",
-						email: "akshatmittal2506@gmail.com",
-						username: "akshatmittal61",
-						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
-					},
-					text: "It was a good one",
-				},
-			],
-		},
-		{
-			id: 6,
-			content:
-				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, surns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
-			author: {
-				name: "Akshat Mittal",
-				email: "akshatmittal2506@gmail.com",
-				username: "akshatmittal61",
-				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
-			},
-			likes: {
-				status: false,
-				count: 3,
-			},
-			comments: [
-				{
-					author: {
-						name: "Akshat Mittal",
-						email: "akshatmittal2506@gmail.com",
-						username: "akshatmittal61",
-						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
-					},
-					text: "It was a good one",
 				},
 			],
 		},
 	]);
 	const likePost = (id) => {
 		let newPosts = [];
-		console.log("Like Post");
 		posts.forEach((post) => {
 			if (post.id === id)
 				newPosts = [
@@ -208,6 +58,31 @@ const Dashboard = () => {
 					},
 				];
 			else newPosts = [...newPosts, post];
+		});
+		setPosts(newPosts);
+	};
+	const submitComment = (id, comment) => {
+		let newPosts = [];
+		posts.forEach((post) => {
+			if (post.id === id) {
+				const newPost = {
+					...post,
+					comments: [
+						...post.comments,
+						{
+							id: "a6s54a6s4a6",
+							content: comment.content,
+							author: { ...user },
+							time: comment.time,
+							likes: {
+								status: false,
+								count: 0,
+							},
+						},
+					],
+				};
+				newPosts = [...newPosts, newPost];
+			} else newPosts = [...newPosts, post];
 		});
 		setPosts(newPosts);
 	};
@@ -246,7 +121,11 @@ const Dashboard = () => {
 								className={`responsive-masonry-box`}
 								key={index}
 							>
-								<Post post={post} likePost={likePost} />
+								<Post
+									addComment={submitComment}
+									post={post}
+									likePost={likePost}
+								/>
 							</div>
 						))}
 					</div>

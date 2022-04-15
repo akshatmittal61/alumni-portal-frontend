@@ -213,7 +213,7 @@ button {
   color: var(--blue-gray);
 }
 .btn-outline {
-  background-color: var(--white);
+  background-color: var(--transparent);
 }
 .btn-neuro {
   border: none;
@@ -228,6 +228,10 @@ button {
 .btn-neuro:hover {
   border-radius: 5px;
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+.btn-neuro:disabled {
+  box-shadow: none;
+  cursor: not-allowed;
 }
 
 .icon {

@@ -39,6 +39,7 @@
   width: 100%;
   height: calc(100% - 2.5rem);
   background-color: var(--bgcolor);
+  overflow-y: auto;
 }
 
 /*# sourceMappingURL=popup.css.map */
