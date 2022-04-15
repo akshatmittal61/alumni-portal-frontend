@@ -1,17 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+import GlobalContext from "../Context/GloablContext";
 import "./popup.css";
 
-const Popup = ({ children, close, title = "", width, height }) => {
+const Popup = ({
+	children,
+	close,
+	title = "",
+	width = "60%",
+	height = "60%",
+	breakpoints = {
+		tab: ["70%", "70%"],
+		mobile: ["85%", "70%"],
+	},
+}) => {
+	const { breakpoint } = useContext(GlobalContext);
 	useEffect(() => {
 		document.addEventListener("keydown", (e) => {
 			if (e.key === "Escape") close();
 		});
 		return () => {
 			document.removeEventListener("keydown", (e) => {
-				if (e.key === "Escape") {
-					console.log("escape");
-					close();
-				}
+				if (e.key === "Escape") close();
 			});
 		};
 	}, [close]);
@@ -20,10 +29,22 @@ const Popup = ({ children, close, title = "", width, height }) => {
 		<section className="popup">
 			<div
 				className="popup-box"
-				style={{
-					width: width,
-					height: height,
-				}}
+				style={
+					breakpoint("mobile")
+						? {
+								width: breakpoints.mobile[0],
+								height: breakpoints.mobile[1],
+						  }
+						: breakpoint("tab")
+						? {
+								width: breakpoints.tab[0],
+								height: breakpoints.tab[1],
+						  }
+						: {
+								width: width,
+								height: height,
+						  }
+				}
 				data-aos="zoom-in"
 			>
 				<div className="popup-head">
