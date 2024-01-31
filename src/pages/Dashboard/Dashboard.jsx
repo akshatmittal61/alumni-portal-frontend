@@ -11,12 +11,12 @@ const Dashboard = () => {
 		{
 			id: 0,
 			content:
-				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
+				"whenever i feel sad, it pretty much always turns out that i'm either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
 			author: {
 				name: "Akshat Mittal",
 				email: "akshatmittal2506@gmail.com",
 				username: "akshatmittal61",
-				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+				avatar: "https://github.com/akshatmittal61.png",
 			},
 			likes: {
 				status: true,
@@ -30,7 +30,7 @@ const Dashboard = () => {
 						name: "Akshat Mittal",
 						email: "akshatmittal2506@gmail.com",
 						username: "akshatmittal61",
-						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+						avatar: "https://github.com/akshatmittal61.png",
 					},
 					time: "Fri Apr 15 2022 16:35:00 GMT+0530 (India Standard Time)",
 					likes: {
@@ -43,12 +43,12 @@ const Dashboard = () => {
 		{
 			id: 1,
 			content:
-				"whenever i feel sad, it pretty much always tuhenever i feel sad, it pretty much always tuhenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
+				"whenever i feel sad, it pretty much always tuhenever i feel sad, it pretty much always tuhenever i feel sad, it pretty much always turns out that i'm either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
 			author: {
-				name: "Akshat Khosya",
-				email: "akshatdps12@gmail.com",
-				username: "akshat-khosya",
-				avatar: "https://avatars.githubusercontent.com/u/76739180?v=4",
+				name: "Varun Prohit",
+				email: "varunprohit222@gmail.com",
+				username: "VarunProhit",
+				avatar: "https://github.com/VarunProhit.png",
 			},
 			likes: {
 				status: false,
@@ -62,7 +62,7 @@ const Dashboard = () => {
 						name: "Akshat Mittal",
 						email: "akshatmittal2506@gmail.com",
 						username: "akshatmittal61",
-						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+						avatar: "https://github.com/akshatmittal61.png",
 					},
 					time: "Fri Apr 15 2022 16:35:00 GMT+0530 (India Standard Time)",
 					likes: {
@@ -74,10 +74,10 @@ const Dashboard = () => {
 					id: "656assdvc6a",
 					content: "It was a good one",
 					author: {
-						name: "Shub",
-						email: "shubhamagarwal@gmail.com",
-						username: "am-shubhagarwal",
-						avatar: "https://avatars.githubusercontent.com/u/81064287?v=4",
+						name: "Tichita",
+						email: "tichita473@gmail.com",
+						username: "tichita7",
+						avatar: "https://github.com/tichita7.png",
 					},
 					time: "Fri Apr 15 2022 16:35:00 GMT+0530 (India Standard Time)",
 					likes: {
@@ -92,10 +92,10 @@ const Dashboard = () => {
 			content:
 				"whenever i feel sad, it pretty much always turns out that i’m either hungry, dehydrated, sleep-deprived, or having a deep existential crisis!",
 			author: {
-				name: "Saurabh",
-				email: "saurabh@gmail.com",
-				username: "saurabh",
-				avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+				name: "Tichita",
+				email: "tichita473@gmail.com",
+				username: "tichita7",
+				avatar: "https://github.com/tichita7.png",
 			},
 			likes: {
 				status: false,
@@ -109,7 +109,7 @@ const Dashboard = () => {
 						name: "Akshat Mittal",
 						email: "akshatmittal2506@gmail.com",
 						username: "akshatmittal61",
-						avatar: "https://avatars.githubusercontent.com/u/84612609?v=4",
+						avatar: "https://github.com/akshatmittal61.png",
 					},
 					time: "Fri Apr 15 2022 16:35:00 GMT+0530 (India Standard Time)",
 					likes: {
